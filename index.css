@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* colors */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+
+    /* font */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/bg-intro-desktop.png");
+    background-color: var(--red);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "text premium"
+                         "text form";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: center;
+}
+
+.text {
+    grid-area: text;
+}
+
+.premium {
+    grid-area: premium;
+}
+
+.form {
+    grid-area: form;
+}
