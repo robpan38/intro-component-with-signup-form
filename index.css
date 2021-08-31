@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 100ms linear;
 }
 
 :root {
@@ -32,18 +33,125 @@ main {
                          "text form";
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
+    gap: 5%;
     justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
 .text {
+    width: 70%;
     grid-area: text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-self: flex-end;
+}
+
+.heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+.content {
+    margin-top: 3%;
+    opacity: 80%;
 }
 
 .premium {
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px / 5px;
+    text-align: center;
+    color: white;
     grid-area: premium;
+    background-color: var(--blue);
+    justify-self: flex-start;
+    align-self: flex-end;
+    font-size: 0.9rem;
+    font-weight: 400;
+    box-shadow: 0px 5px hsl(0, 48%, 57%);
 }
 
 .form {
+    width: 70%;
     grid-area: form;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px / 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: flex-start;
+    align-self: flex-start;
+    box-shadow: 0px 5px hsl(0, 48%, 57%);
+}
+
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--darkBlue);
+}
+
+.inputDiv {
+    width: 100%;
+    position: relative;
+}
+
+.inputDiv input {
+    width: 100%;
+}
+
+.inputDiv img {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    opacity: 0%;
+}
+
+.form input {
+    padding: 15px;
+    border-radius: 5px / 5px;
+    border-width: 0.5px;
+    border-color: var(--grayishBlue);
+    border-style: solid;
+    margin-bottom: 3%;
+}
+
+.errorText {
+    text-align: end;
+    margin-top: -3%;
+    margin-bottom: 3%;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--red);
+    font-style: italic;
+    display: none;
+}
+
+.greenButton {
+    padding: 2%;
+    background-color: var(--green);
+    border-radius: 5px / 5px;
+    border-width: 0px;
+    color: white;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0px 5px hsl(154, 57%, 38%);
+    margin-bottom: 3%;
+}
+
+.greenButton:active {
+    box-shadow: 0px 2px hsl(154, 57%, 38%);
+}
+
+.terms {
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--grayishBlue);
 }
